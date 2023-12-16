@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+.header {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  display: flex;
+  background: rgba(255, 255, 255, 1);
+  height: 80px;
+  align-items: center;
+
+  .header__title {
+    text-decoration: none;
+    margin-left: 20px;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .header__in {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  .header__up {
+    margin-right: 20px;
+  }
+  .header__signUp {
+    color: rgba(82, 196, 26, 1);
+    border-color: rgba(82, 196, 26, 1);
+    font-family: "Inter", sans-serif;
+  }
+  .header__signIn {
+    font-family: "Inter", sans-serif;
+  }
+  .header__user {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.85);
+    size: 18px;
+  }
+  .header__userName {
+    margin-right: 10px;
+  }
+  .header__userImg {
+    margin-right: 10px;
+    height: 56px;
+  }
+  .header__LogOut {
+    margin-right: 20px;
+    font-family: "Inter", sans-serif;
+  }
+}
