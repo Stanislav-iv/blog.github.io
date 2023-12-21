@@ -28,7 +28,7 @@ const SignUp = () => {
   return (
     <>
       {errorServer && <h2> An error occured: {errorServer} </h2>}
-      <RegUser signUp handlerFormSubmit={handlerFormSubmit} />;
+      <RegUser signUp handlerFormSubmit={handlerFormSubmit} userRequestStatus={userRequestStatus} />;
     </>
   )
 }

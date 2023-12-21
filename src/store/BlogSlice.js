@@ -173,6 +173,7 @@ const blogSlice = createSlice({
     error: null,
     singleArticle: null,
     creatArticle: false,
+    updateUser: [],
   },
   reducers: {},
   extraReducers: {
@@ -207,6 +208,7 @@ const blogSlice = createSlice({
     [fetchSingleArticle.fulfilled]: (state, action) => {
       state.singleArticle = { ...action.payload.article }
       state.articleRequestStatus = 'fulfilled'
+      state.updateUser = action.payload.article.author
     },
     [fetchCreateArticle.fulfilled]: (state) => {
       state.articleRequestStatus = 'fulfilled'

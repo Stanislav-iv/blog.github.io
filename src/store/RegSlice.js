@@ -163,6 +163,10 @@ const regSlice = createSlice({
       state.userRequestStatus = 'fulfilled'
       state.userEdit = true
     },
+    [fetchLogin.rejected]: (state, action) => {
+      ;(state.error = 'User not logged in, error!!!'), action.payload
+      state.userRequestStatus = 'rejected'
+    },
     [fetchRegister.rejected]: (state, action) => {
       state.error = action.payload
       state.userRequestStatus = 'rejected'

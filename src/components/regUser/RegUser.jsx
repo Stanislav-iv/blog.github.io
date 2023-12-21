@@ -7,7 +7,7 @@ import { Box, Button, Checkbox, Divider, FormControlLabel, Paper, TextField, Typ
 import * as Yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-const RegUser = ({ signUp, user, handlerFormSubmit }) => {
+const RegUser = ({ signUp, user, handlerFormSubmit, userRequestStatus }) => {
   const formTitle = signUp ? 'Create new account' : 'Edit profile'
   const buttonLabel = signUp ? 'Create' : 'Save'
 
@@ -169,6 +169,7 @@ information"
             type="submit"
             variant="contained"
             fullWidth
+            disabled={userRequestStatus === 'pending' && true}
             sx={{
               my: 2,
             }}

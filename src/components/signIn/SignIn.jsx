@@ -28,7 +28,7 @@ const SignIn = () => {
   return (
     <>
       {errorServer && <h2> An error occured: {errorServer} </h2>}
-      <LogUser handleFormSubmit={handleFormSubmit} />;
+      <LogUser handleFormSubmit={handleFormSubmit} userRequestStatus={userRequestStatus} />;
     </>
   )
 }

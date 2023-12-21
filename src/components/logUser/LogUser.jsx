@@ -7,7 +7,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Box, Button, Paper, TextField, Typography } from '@mui/material'
 
 // eslint-disable-next-line react/prop-types
-const LogUser = ({ handleFormSubmit }) => {
+const LogUser = ({ handleFormSubmit, userRequestStatus }) => {
   const validationSchema = Yup.object().shape({
     email: Yup.string().required('Поле "Email" должно быть заполнено').email('Email не верный'),
     password: Yup.string()
@@ -84,6 +84,7 @@ const LogUser = ({ handleFormSubmit }) => {
             sx={{
               mb: 2,
             }}
+            disabled={userRequestStatus === 'pending' && true}
           >
             Login
           </Button>

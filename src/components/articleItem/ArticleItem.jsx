@@ -8,7 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import Key from '../utilites/Key'
 
-const ArticleItem = ({ article, handlerFormSubmit }) => {
+const ArticleItem = ({ article, handlerFormSubmit, userRequestStatus }) => {
   const validationSchema = Yup.object().shape({
     title: Yup.string().required('Поле "Title" должно быть заполнено'),
     description: Yup.string().required('Поле "Short description" должно быть заполнено'),
@@ -161,6 +161,7 @@ const ArticleItem = ({ article, handlerFormSubmit }) => {
           <Button
             type="submit"
             variant="contained"
+            disabled={userRequestStatus === 'pending' && true}
             sx={{
               mb: 2,
               textTransform: 'none',
