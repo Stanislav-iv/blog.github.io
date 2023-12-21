@@ -1,1 +1,1 @@
-https://blog-github-io-rouge.vercel.app/articles
+https://blog-github-52aeqpv1s-gibls1991-gmailcom.vercel.app/articles
